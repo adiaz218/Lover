@@ -1,0 +1,19 @@
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 25px; 
+}
+
+audio { display:none;}
+
+body {
+  /* This style below will be inherited */
+  font-family: Roboto, Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(255, 168, 216);
+}
