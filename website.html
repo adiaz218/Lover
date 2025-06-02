@@ -2,26 +2,44 @@
 <html>
   <head>
     <title>Arletzy</title>
-    <link rel="stylesheet" href="styles/header.css">
+    <!-- css styles -->
     <link rel="stylesheet" href="styles/book.css">
     <link rel="stylesheet" href="styles/text.css">
     <link rel="stylesheet" href="styles/general.css">
+    <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link href="booklet/jquery.booklet.latest.css" type="text/css" rel="stylesheet" media="screen, projection, tv" />
+    <!-- audio player -->
     <audio controls autoplay loop>
       <source src="So High School.mp3" type="audio/mpeg">
     </audio>
   </head>
 
   <body>
-    <main>
-      <section>
-        <h1 id="typeWriterHeader" class="shadows-into-light-regular"></h1>
-        <p id="typeWriterPara" class="shadows-into-light-regular indent"></p>
-      </section>
-    </main>
-    <script src="scripts/typewriter.js"></script>
+    <div class="book-wrapper">
+      <div id="book">
+        <img id="book-frame" src="pages/book_0.png" alt="Book Frame">
+
+        <!-- These two containers must be siblings of the image -->
+        <div id="page-content" style="display:none;">
+          <div class="left-page"></div>
+          <div class="right-page"></div>
+        </div>
+
+        <div id="dynamic-content" style="display:none;"></div>
+      </div>
+    </div>
+
+
+
+    <div class="controls">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/logic.js"></script>
   </body>
+
 </html>
