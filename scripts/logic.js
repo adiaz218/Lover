@@ -5,12 +5,15 @@ function typeWriterLetter() {
   const leftTarget = document.querySelector('.left-page');
   const rightTarget = document.querySelector('.right-page');
 
-  const leftText = `Litzy,\nThese past 6 months with you have been a dream. It feels like it's been longer. I know we've had our up's and down's, but I am glad we were able to get through them together. I am very glad to have you in my life again. Getting to know you more the second time has been a blessing. You are my person, and you are stuck with me forever. I can't wait to build a life and start a family with you. Here's to the many years we have ahead of us. I love you so much baby, happy six months mi amor 💟
+  const leftText = `Litzy,
+
+These past 6 months with you have been a dream. It feels like it's been longer. I know we've had our up's and down's, but I am glad we were able to get through them together. I am very glad to have you in my life again. Getting to know you more the second time has been a blessing. You are my person, and you are stuck with me forever. I can't wait to build a life and start a family with you. Here's to the many years we have ahead of us. I love you so much baby, happy six months mi amor 💟
 
 With love,
 Arlette`;
 
-  const rightText = ``;
+  const rightText = `\nI know you've wanted your own blog so this is my shot at it. Of coruse this isn't the whole thing. I wanted to create a scrapbook like thing were we can upload our pictures and videos for memories. I really hope you love it. \nI've added my favorite memories from the past 6 months with you. I look foward to adding more together and taking your input to build your dream blog website. 
+I LOVE YOU LITZY‼️‼️`;
 
   if (letterTyped) {
     // Don't retype — just show the letter
@@ -77,9 +80,23 @@ const frameSets = [
   [16, 18]  // Closing
 ];
 
-// HTML snippets for regular content (pages 3+)
 const dynamicPages = {
-  3: `<h3>Chapter 3</h3><ul><li>Clue 1</li><li>Clue 2</li></ul>`
+  2: {
+    left: [
+      { images:  ['images/memory1.jpg', 'images/memory2.jpg'], caption: 'I loved how affectionate you were when we first started seeing eachother' }
+    ],
+    right: [
+      { images: ['images/memory3.jpg', 'images/memory4.jpg'], caption: 'I love spending time with you and yeli (mainly you tho)'},
+    ]
+  },
+  3: {
+    left: [
+      { images: ['images/memory5.jpg', 'images/memory6.jpeg'], caption: 'Holidays with you <3'}
+    ], 
+    right: [
+      { images: ['images/memory7.jpeg', 'images/memory8.jpg'], caption: 'When we became official‼️‼️'}
+    ]
+  }
 };
 
 let currentSetIndex = 0;
@@ -102,18 +119,43 @@ function animateFrames(start, end, step = 1, delay = 100, onComplete) {
 }
 
 function updateDynamicPage() {
-  const [startFrame, _] = frameSets[currentSetIndex];
+  // const [startFrame, _] = frameSets[currentSetIndex];
+  // $('#book-frame').attr('src', `pages/book_${startFrame}.png`);
+
+  // $('.left-page').html('');
+  // $('.right-page').html('');
+  // $('#page-content').show();
+
+  const [startFrame] = frameSets[currentSetIndex];
   $('#book-frame').attr('src', `pages/book_${startFrame}.png`);
 
-  $('#page-content').hide();
-  $('#dynamic-content').hide();
+  $('.left-page').html('');
+  $('.right-page').html('');
+  $('#page-content').show();
 
   if (currentSetIndex === 1) {
-    $('#page-content').show();
     typeWriterLetter();
-  } else if (dynamicPages[currentSetIndex]) {
-    $('#dynamic-content').html(dynamicPages[currentSetIndex]).show();
-  } else if (currentSetIndex === frameSets.length - 1) {
+    return;
+  }
+
+  const page = dynamicPages[currentSetIndex];
+  if (page) {
+    const renderBlock = ({ images, caption }) => `
+      <div class="memory-row">
+        <div class="image-row">
+          ${images.map(src => `<img src="${src}" class="page-photo" />`).join('')}
+        </div>
+        <p class="caption">${caption}</p>
+      </div>`;
+
+    (page.left || []).forEach(block => {
+      $('.left-page').append(renderBlock(block));
+    });
+
+    (page.right || []).forEach(block => {
+      $('.right-page').append(renderBlock(block));
+    });
+  }else if (currentSetIndex === frameSets.length - 1) {
     $('#book-frame').attr('src', `pages/book_18.png`);
     $('.left-page').html('');
     $('.right-page').html('');

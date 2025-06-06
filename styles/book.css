@@ -2,20 +2,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
   background-color: rgb(255, 168, 216);
 }
 
 .book-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
 }
 
 #book {
   position: relative;
-  width: 1000px;  /* adjust to match your image size */
-  height: 800px;
+  width: 1200px;  /* adjust to match your image size */
+  height: 960px;
   image-rendering: pixelated;
 }
 
@@ -28,10 +26,10 @@ body {
 
 #page-content {
   position: absolute;
-  top: 125px;      /* adjust to vertically align with pages */
-  left: 155px;     /* adjust to match image padding */
-  width: 700px;   /* roughly width of both pages */
-  height: 520px;  /* roughly height of the book pages */
+  top: 175px;      /* adjust to vertically align with pages */
+  left: 175px;     /* adjust to match image padding */
+  width: 820px;   /* roughly width of both pages */
+  height: 600px;  /* roughly height of the book pages */
   display: flex;
   gap: 40px;
   padding: 0;
@@ -51,6 +49,40 @@ body {
   overflow-wrap: break-word;
   white-space: pre-wrap;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;     /* stack blocks top→bottom  */
+  align-items: center;        /* keep them centered       */
+  gap: 2px;                  /* space between blocks     */
+}
+
+.memory-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.page-photo {
+  max-width: 220px;   /* size of each photo */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.caption {
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #222;
 }
 
 .left-page {
