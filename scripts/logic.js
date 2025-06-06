@@ -12,7 +12,7 @@ These past 6 months with you have been a dream. It feels like it's been longer. 
 With love,
 Arlette`;
 
-  const rightText = `\nI know you've wanted your own blog so this is my shot at it. Of coruse this isn't the whole thing. I wanted to create a scrapbook like thing were we can upload our pictures and videos for memories. I really hope you love it. \nI've added my favorite memories from the past 6 months with you. I look foward to adding more together and taking your input to build your dream blog website. 
+  const rightText = `I know you've wanted your own blog so this is my shot at it. Of coruse this isn't the whole thing. I wanted to create a scrapbook like thing were we can upload our pictures and videos for memories. I really hope you love it. \nI've added my favorite memories from the past months being with you. I look foward to adding more together and taking your input to build your dream blog website. 
 I LOVE YOU LITZY‼️‼️`;
 
   if (letterTyped) {
