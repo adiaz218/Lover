@@ -115,6 +115,14 @@ const dynamicPages = {
     right: [
       { images: ['images/memory15.jpg', 'images/memory16.jpg', 'images/memory17.jpg'], caption: 'Thank you for the best birthday date <3'}
     ]
+  },
+  6: {
+    left: [
+      // { images: ['images/memory13.jpg', 'images/memory14.jpg'], caption: 'I LOVE WHEN WE MATCH'}
+    ], 
+    right: [
+      // { images: ['images/memory15.jpg', 'images/memory16.jpg', 'images/memory17.jpg'], caption: 'Thank you for the best birthday date <3'}
+    ]
   }
 };
 
@@ -175,7 +183,7 @@ function updateDynamicPage() {
       $('.right-page').append(renderBlock(block));
     });
   }else if (currentSetIndex === frameSets.length - 1) {
-    $('#book-frame').attr('src', `pages/book_18.png`);
+    $('#book-frame').attr('src', `pages/book_30.png`);
     $('.left-page').html('');
     $('.right-page').html('');
   }
