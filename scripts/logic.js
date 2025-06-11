@@ -77,7 +77,10 @@ const frameSets = [
   [4, 7],   // Page 1
   [8, 11],  // Page 2
   [12, 15], // Page 3
-  [16, 18]  // Closing
+  [16, 19], // Page 4
+  [20,23], // Page 5
+  [24, 27], // Page 6
+  [28, 30] // Closing 
 ];
 
 const dynamicPages = {
@@ -95,6 +98,22 @@ const dynamicPages = {
     ], 
     right: [
       { images: ['images/memory7.jpeg', 'images/memory8.jpg'], caption: 'When we became official‼️‼️'}
+    ]
+  },
+  4: {
+    left: [
+      { images: ['images/memory9.jpg', 'images/memory10.jpg'], caption: 'Our Aquarium date was one of my favs'}
+    ], 
+    right: [
+      { images: ['images/memory11.jpg', 'images/memory12.jpg'], caption: 'I love that we are both silly'}
+    ]
+  },
+  5: {
+    left: [
+      { images: ['images/memory13.jpg', 'images/memory14.jpg'], caption: 'I LOVE WHEN WE MATCH'}
+    ], 
+    right: [
+      { images: ['images/memory15.jpg', 'images/memory16.jpg', 'images/memory17.jpg'], caption: 'Thank you for the best birthday date <3'}
     ]
   }
 };
