@@ -86,12 +86,12 @@ const dynamicPages = {
       { images:  ['images/memory1.jpg', 'images/memory2.jpg'], caption: 'I loved how affectionate you were when we first started seeing eachother' }
     ],
     right: [
-      { images: ['images/memory3.jpg', 'images/memory4.jpg'], caption: 'I love spending time with you and yeli (mainly you tho)'},
+      { images: ['images/memory3.jpg', 'images/memory4.JPG'], caption: 'I love spending time with you and yeli (mainly you tho)'},
     ]
   },
   3: {
     left: [
-      { images: ['images/memory5.jpg', 'images/memory6.jpeg'], caption: 'Holidays with you <3'}
+      { images: ['images/memory5.JPG', 'images/memory6.jpeg'], caption: 'Holidays with you <3'}
     ], 
     right: [
       { images: ['images/memory7.jpeg', 'images/memory8.jpg'], caption: 'When we became official‼️‼️'}
